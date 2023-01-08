@@ -1,0 +1,676 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.zoom-image {
+    transition: 0.3s;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+.page-title {
+    color: #004aad;
+    font-size: 30px;
+    text-align: center;
+}
+
+.page-title span {
+    color: #000000;
+}
+
+.page-title-line {
+    margin-top: 15px !important;
+    border: 0;
+    height: 3px;
+    width: 20%;
+    margin: 0 auto;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0));
+}
+
+.about-title-line {
+    margin-top: 5px !important;
+    border: 0;
+    height: 3px;
+    width: 10%;
+    margin: 0 auto;
+    background: #0d0e10;
+    border-radius: 5px;
+}
+
+/******************************************************* navigation *******************************************************/
+nav {
+    height: 6rem;
+    /* width: 100vw; */
+    background-color: #004aad45;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* position: fixed; */
+    z-index: 10;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Styling logo*/
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+    max-width: 170px;
+}
+
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: #004aad;
+    font-weight: 600;
+}
+
+.nav-links li a:hover {
+    color: #000000;
+}
+
+a.active {
+    border-bottom: 3px solid #004aad;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #000000;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::after {
+    width: 80%;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 767px) {
+    nav {
+        position: relative;
+        z-index: 100;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .nav-links {
+        position: fixed;
+        background-color: #001238;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    ul.nav-links.open {
+        padding-top: 445px;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% 10%);
+        -webkit-clip-path: circle(1000px at 90% 10%);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/******************************************************* navigation end *******************************************************/
+
+
+/******************************************************* hero section *******************************************************/
+.hero {
+    background-image: url('../img/home/hero.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    height: calc(100vh - 6rem);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hero p {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero .btn-box {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+/******************************************************* hero section end *******************************************************/
+
+/******************************************************* about section *******************************************************/
+.home-about-section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.content-column {
+    display: flex;
+    gap: 50px;
+}
+
+.text-column,
+.image-column {
+    width: 50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sec-title .title {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    line-height: 24px;
+    color: #004aad;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sec-title h2 {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    line-height: 1.28em;
+    color: #222222;
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+
+.sec-title .text {
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    color: #848484;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.btn-style-one {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-weight: 600;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+    background-color: #004aad;
+}
+
+.btn-style-one:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #212338ab;
+    font-weight: 400;
+}
+
+.home-about-section .btn-box a {
+    padding: 15px 50px;
+}
+
+.home-about-section .image-column .inner-column {
+    position: relative;
+    padding-left: 150px;
+    padding-bottom: 125px;
+}
+
+.home-about-section .image-column .inner-column:before {
+    position: absolute;
+    left: -110px;
+    top: 65px;
+    height: 520px;
+    width: 520px;
+    background-color: rgb(168 171 205 / 10%);
+    border-radius: 100%;
+    content: "";
+}
+
+.home-about-section .image-column .image-1 {
+    position: relative;
+    width: 90%;
+}
+
+.home-about-section .image-column .image-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+}
+
+.home-about-section .image-column .image-2 img,
+.home-about-section .image-column .image-1 img {
+    box-shadow: 0 30px 50px rgba(8, 13, 62, .15);
+}
+
+/******************************************************* about section end *******************************************************/
+
+/******************************************************* anime and manga section *******************************************************/
+.home-anime-section,
+.home-manga-section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.home-anime-section .content-column,
+.home-manga-section .content-column {
+    gap: 50px;
+}
+
+/******************************************************* anime and manga section end *******************************************************/
+
+/******************************************************* footer  *******************************************************/
+
+/* footer */
+footer {
+    padding: 50px 0;
+    background-color: #004aad45;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-top a {
+    font-size: 20px;
+}
+
+.footer-top img {
+    height: 4rem;
+}
+
+.footer-middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 40px 0;
+    max-width: 60%;
+}
+
+.footer-middle a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: #000000;
+    font-weight: 600;
+}
+
+.footer-middle a:hover {
+    color: #004aad;
+}
+
+
+/*protection modal*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    display: none;
+}
+
+.cnt223 a {
+    text-decoration: none;
+}
+
+.popup {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+}
+
+.cnt223 {
+    min-width: 600px;
+    width: 600px;
+    min-height: 150px;
+    margin: 100px auto;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 15px 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+
+.cnt223 p {
+    clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.cnt223 p a {
+    color: #d91900;
+    font-weight: bold;
+}
+
+.cnt223 .x {
+    float: right;
+    height: 35px;
+    left: 22px;
+    position: relative;
+    top: -25px;
+    width: 34px;
+}
+
+.cnt223 .x:hover {
+    cursor: pointer;
+}
+
+
+/******************************************************* footer end *******************************************************/
+
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+
+    /******************************************************* navigation *******************************************************/
+    .nav-links li a {
+        color: #ffffff;
+    }
+
+    .nav-links li a:hover {
+        color: #ffffff;
+        border-bottom: none;
+    }
+
+    /******************************************************* hero section *******************************************************/
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        top: 40%;
+        max-width: 80%;
+        text-align: center;
+        font-size: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero .btn-box {
+        top: 70%;
+    }
+
+    /******************************************************* about section *******************************************************/
+    .text-column,
+    .image-column {
+        width: 100%;
+    }
+
+    .content-column {
+        display: block;
+    }
+
+    .home-about-section .image-column .inner-column {
+        padding-left: 25px;
+        padding-bottom: 150px;
+    }
+
+    figure.image-1 img {
+        width: 350px;
+    }
+
+    .home-about-section .image-column .inner-column:before {
+        position: relative;
+    }
+
+    .sec-title h2 {
+        font-size: 25px;
+    }
+
+    .sec-title .title {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    /******************************************************* anime and manga section *******************************************************/
+    .home-about-section .text-column,
+    .home-manga-section .text-column {
+        padding-top: 50px;
+    }
+
+    section.home-anime-section .content-column {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    section.home-anime-section,
+    section.home-manga-section {
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+
+
+    /******************************************************* footer *******************************************************/
+    .footer-wrapper {
+        gap: 0;
+    }
+
+    .footer-middle {
+        max-width: 100%;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /******************************************************* hero section *******************************************************/
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        top: 48%;
+        font-size: 18px;
+    }
+
+    /******************************************************* about section *******************************************************/
+    .text-column,
+    .image-column {
+        width: 100%;
+    }
+
+    .content-column {
+        display: block;
+    }
+
+    .home-about-section .image-column .inner-column {
+        padding-left: 180px;
+        padding-bottom: 150px;
+    }
+
+    figure.image-1 img {
+        width: 350px;
+    }
+
+    .home-about-section .image-column .inner-column:before {
+        top: 60px;
+    }
+
+    .home-about-section .image-column .image-2 {
+        left: 55px;
+    }
+
+    /******************************************************* anime and manga section *******************************************************/
+    .home-about-section .text-column,
+    .home-manga-section .text-column {
+        padding-top: 50px;
+    }
+
+    section.home-anime-section .content-column {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    section.home-anime-section,
+    section.home-manga-section {
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+
+}

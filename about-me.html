@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+
+  <link rel="icon" type="image" href="./assets/img/logo/favicon.png">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/about-me.css">
+</head>
+
+<body style="background-color: #0251bb2e;">
+  <!-- navigation -->
+  <nav>
+    <div class="container navigation">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./assets/img/logo/logo.png" alt="Logo Image">
+        </a>
+      </div>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about-me.html" class="active">ABOUT ME</a></li>
+        <li><a href="./anime.html">ANIME</a></li>
+        <li><a href="./manga.html">MANGA</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navigation end -->
+
+  <!-- about me section -->
+  <section class="about-me">
+    <div class="container">
+      <div class="page-title">About <span>Me</span></div>
+      <hr class="page-title-line">
+
+      <!-- How I Got Started With Anime & Manga -->
+      <div class="about-me-wrapper">
+        <div class="about-title">
+          <h2>How I Got Started With Anime & Manga</h2>
+          <hr class="about-title-line">
+        </div>
+        <div class="about-text">
+          <p>
+            I got started with anime I would like to say around the age of 5. This was way before I even knew what anime
+            was, but the shows I watched were mainly Naruto, Yugioh, and Dragonball on this Cartoon network called
+            Toonami it is a very old network that no longer exists but in the early 2000s that’s where anime would be
+            streamed, so every Saturday afternoon I would watch either the newest episode of the three said shows every
+            single week and I loved every second of it.
+          </p>
+          <p>
+            Now fast forward to around 2018 when I started to watch anime again because I stopped for a while due to
+            certain circumstances, but I started back up in 2018 with my first series called one punch man I was
+            watching it with my friend at the time and he mentioned it being an anime and I asked “What is anime
+            exactly?” and he told me that it was basically cartoons made in japan and I proceeded to name some of the
+            shows that I used to watch and he told me that those were anime’s so I was shocked to know that I have been
+            watching anime all these years. After a little while I would like to say about 2 years ago when the pandemic
+            started and I went to college that’s really when my anime watching was reignited.
+          </p>
+          <p>
+            I watched all of Naruto as a whole including it’s sequel which I did not know about until my friend showed
+            me, so I was super excited to watch it and it later became my favorite anime of all time still is, but I do
+            not consider it the best.
+          </p>
+          <p>
+            Now with manga I got introduced to it very late on in my life actually just last year I found out about
+            manga and I started collecting them, because I myself personally like to read the physical copies I think it
+            makes you more immersed into the story.
+          </p>
+          <p>
+            When I was living up in Tampa, Florida my collection of manga was decently big, but compared to it now is
+            like a night and day difference.
+          </p>
+          <p>
+            That’s basically how I got started with anime and manga I’m really happy I discovered it, because it
+            genuinely brings me a lot of joy and happiness whenever I’m experiencing a new series for the first time.
+          </p>
+        </div>
+      </div>
+
+      <!-- My Anime & Manga Recommendations -->
+      <div class="about-me-wrapper">
+        <div class="about-title">
+          <h2>My Anime & Manga Recommendations</h2>
+          <hr class="about-title-line">
+        </div>
+        <div class="about-text">
+          <div class="recommendations-wrapper">
+            <div class="container">
+              <div class="animanga-wrapper">
+                <div class="animanga">
+                  <h5 onclick="aniManga('anime')" class="anime-btn">Anime</h5>
+                </div>
+                <div class="animanga">
+                  <h5 onclick="aniManga('manga')" class="manga-btn">Manga</h5>
+                </div>
+              </div>
+
+              <!-- anime -->
+              <div class="animanga-recommendations" id="anime">
+                <div class="animanga-grid">
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Dr Stone</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/dr-stone.jpg" alt="dr-stone" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Erased</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/erased.jpg" alt="erased" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Terror In Resonance</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/terror-In-resonance.jpg" alt="terror-In-resonance"
+                        class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Mob Psycho</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/mob-psycho.jpg" alt="mob-psycho" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>86 Eighty Six</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/eighty-six.jpg" alt="eighty-six" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Hellsing Ultimate</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/anime/hellsing-ultimate.png" alt="hellsing-ultimate"
+                        class="zoom-image">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- manga -->
+              <div class="animanga-recommendations" id="manga" style="display:none">
+                <div class="animanga-grid">
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Biomega</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/biomega.jpg" alt="biomega" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Chainsaw Man</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/chainsaw-man.jpg" alt="chainsaw-man" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Beck</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/beck.jpg" alt="beck" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Bleach</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/bleach.png" alt="bleach" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Dai Dark</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/dai-dark.jpg" alt="dai-dark" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Tokyo Ghoul</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/tokyo-ghoul.jpg" alt="tokyo-ghoul" class="zoom-image">
+                    </div>
+                  </div>
+                  <div class="animanga-item">
+                    <div class="animanga-title">
+                      <h5>Berserk</h5>
+                    </div>
+                    <div class="animanga-image">
+                      <img src="./assets/img/about/manga/berserk.png" alt="berserk" class="zoom-image">
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- about me section end -->
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-top">
+          <a href="./index.html">
+            <img src="./assets/img/logo/logo.png" alt="logo">
+          </a>
+        </div>
+
+        <div class="footer-middle">
+          <a href="./index.html">HOME</a>
+          <a href="#">ABOUT ME</a>
+          <a href="./anime.html">ANIME</a>
+          <a href="./manga.html">MANGA</a>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2022 The AniManga Zone. All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
